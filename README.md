@@ -25,8 +25,6 @@ Ferramenta web simples para gerar o arquivo **apple-app-site-association** de fo
 
 ## 🌐 Acesse o projeto
 
-👉 ()
-
 Exemplo:
 
 ![Demonstração do gerador](./assets/demo.gif)
