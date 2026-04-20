@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gerador AASA</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+
+<div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-xl">
+  <h1 class="text-xl font-bold mb-6 text-center">
+    Gerador Apple App Site Association
+  </h1>
+
+  <label for="cloud" class="block font-semibold mb-1">Cloud Commerce</label>
+  <select id="cloud" class="input">
+    <option value="">Selecione</option>
+  </select>
+
+  <div id="alert" class="hidden text-red-500 mt-2"></div>
+
+  <div id="form" class="hidden mt-4">
+
+    <label for="teamId" class="block mt-2 font-semibold">TEAM ID</label>
+    <input id="teamId" class="input" placeholder="Ex: FYUF988">
+
+    <label for="package" class="block mt-2 font-semibold">Nome do pacote</label>
+    <input id="package" class="input" placeholder="com.kobe.exemplo">
+
+    <label class="flex items-center gap-2 mt-3">
+      <input type="checkbox" id="useDefault" checked>
+      Usar paths padrão
+    </label>
+
+    <div id="preview" class="preview"></div>
+
+    <label for="customPaths" class="block mt-2 font-semibold">Paths customizados</label>
+    <textarea id="customPaths" class="input hidden"></textarea>
+
+    <label for="excludePaths" class="block mt-2 font-semibold">Paths para excluir</label>
+    <textarea id="excludePaths" class="input"></textarea>
+
+    <label class="flex items-center gap-2 mt-3">
+      <input type="checkbox" id="appclips">
+      Adicionar App Clips
+    </label>
+
+    <!-- ERRO -->
+    <div id="errorMsg" class="hidden text-red-600 text-sm mt-3"></div>
+
+    <button id="generateBtn" class="btn">Gerar arquivo</button>
+  </div>
+</div>
+
+<script type="module" src="./js/main.js"></script>
+
+</body>
+</html>
