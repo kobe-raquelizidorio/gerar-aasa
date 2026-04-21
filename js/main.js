@@ -6,6 +6,18 @@ const preview = document.getElementById("preview");
 const alertBox = document.getElementById("alert");
 const form = document.getElementById("form");
 
+function showToast(message = "Arquivo gerado com sucesso!") {
+  const toast = document.getElementById("toast");
+  const toastMessage = document.getElementById("toastMessage");
+
+  toastMessage.textContent = message;
+  toast.classList.remove("hidden");
+
+  setTimeout(() => {
+    toast.classList.add("hidden");
+  }, 2500);
+}
+
 const clouds = ["vtex","shopify","magento","wakecommerce","salesforce"];
 
 cloudSelect.innerHTML = `<option value="">Selecione</option>` +
@@ -60,7 +72,7 @@ document.getElementById("generateBtn").addEventListener("click", ()=>{
   }
 
   if (errors.length > 0) {
-    errorBox.innerHTML = errors.join("<br>");
+    errorBox.textContent = errors.join("\n");
     errorBox.classList.remove("hidden");
     return;
   }
@@ -81,4 +93,24 @@ document.getElementById("generateBtn").addEventListener("click", ()=>{
   });
 
   baixarJSON(data);
+  showToast("Arquivo gerado com sucesso!");
+
+  setTimeout(() => {
+
+    // 🔄 RESET DA TELA
+    document.getElementById("teamId").value = "";
+    document.getElementById("package").value = "";
+    document.getElementById("customPaths").value = "";
+    document.getElementById("excludePaths").value = "";
+    document.getElementById("appclips").checked = false;
+    document.getElementById("useDefault").checked = true;
+
+    document.getElementById("customPaths").classList.add("hidden");
+    document.getElementById("preview").innerHTML = "";
+    document.getElementById("errorMsg").classList.add("hidden");
+
+    cloudSelect.value = "";
+    form.classList.add("hidden");
+
+  }, 800); 
 });
