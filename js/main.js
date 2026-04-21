@@ -18,7 +18,7 @@ function showToast(message = "Arquivo gerado com sucesso!") {
   }, 2500);
 }
 
-const clouds = ["vtex","shopify","magento","wakecommerce","salesforce"];
+const clouds = ["VTEX","Shopify","Magento","WakeCommerce","Salesforce"];
 
 cloudSelect.innerHTML = `<option value="">Selecione</option>` +
   clouds.map(c => `<option value="${c}">${c}</option>`).join("");
@@ -26,7 +26,7 @@ cloudSelect.innerHTML = `<option value="">Selecione</option>` +
 cloudSelect.addEventListener("change", () => {
   const cloud = cloudSelect.value;
 
-  if (cloud === "wakecommerce") {
+  if (cloud === "WakeCommerce") {
     alertBox.innerText = "WakeCommerce ainda não possui implementação.";
     alertBox.classList.remove("hidden");
     form.classList.add("hidden");
