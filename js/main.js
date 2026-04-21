@@ -37,7 +37,7 @@ cloudSelect.addEventListener("change", () => {
   form.classList.remove("hidden");
 
   preview.innerHTML = (PATHS[cloud] || [])
-    .map(p => `• ${p}`).join("<br>");
+    .map(p => ` ${p}`).join("<br>");
 });
 
 document.getElementById("useDefault").addEventListener("change", (e)=>{
