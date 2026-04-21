@@ -1,7 +1,7 @@
 export const PATHS = {
-  vtex: ["*/p","/*","/","*/cart","/checkout","/wishlist","/login"],
-  shopify: ["/products/*","/","/cart","/collections/*","/authentication/login"],
-  magento: ["*","/*","/"],
-  wakecommerce: [],
-  salesforce: ["/produto/*","/categoria/*"]
+  VTEX: ["*/p","/*","/","*/cart","/checkout","/wishlist","/login"],
+  Shopify: ["/products/*","/","/cart","/collections/*","/authentication/login"],
+  Magento: ["*","/*","/"],
+  WakeCommerce: [],
+  Salesforce: ["/produto/*","/categoria/*"]
 };
